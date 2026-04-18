@@ -3,12 +3,16 @@
 }
 
 #container {
-    border: 1px red solid;
+    border: 2px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    /* max-width: 176px; */
 }
 
 .small-square {
-    width:4px; 
-    height:4px; 
-    background-color:lightgrey; 
-    border:solid 1px blue;
+    width: 10px; 
+    height: 10px; 
+    background-color: lightgrey; 
+    /* border: solid 1px blue; */
 }
