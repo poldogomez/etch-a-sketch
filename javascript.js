@@ -7,7 +7,7 @@ const container = document.querySelector("#container");
 for (let i = 1; i <= gridSide; i++) {
     for (let j = 1; j <= gridSide; j++) {
         //create unique id
-        idArr.push(i + "-" + j);
+        idArr.push({ boxId: i + "-" + j, color: "lightgray" });
         // create grid
         const square = document.createElement("div");
             square.id = i + "-" + j;
