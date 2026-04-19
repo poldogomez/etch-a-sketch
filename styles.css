@@ -7,12 +7,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1px;
-    /* max-width: 176px; */
 }
 
 .small-square {
-    width: 10px; 
-    height: 10px; 
     background-color: lightgrey; 
-    /* border: solid 1px blue; */
+}
+
+.small-square:hover {
+    background-color: lime;
 }
