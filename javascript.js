@@ -1,4 +1,4 @@
-let gridSide = 16;
+let gridSide = 32;
 let sideLength = 10;
 
 const container = document.querySelector("#container");
@@ -14,10 +14,10 @@ for (let i = 1; i <= gridSide; i++) {
     };
 };
 
-const squares = document.querySelectorAll(".small-square");
+const boxes = document.querySelectorAll(".small-square");
 
-squares.forEach(square => {
-    square.addEventListener('mouseout', () => {
-        square.style.backgroundColor = 'blue';
+boxes.forEach(box => {
+    box.addEventListener('mouseout', () => {
+        box.style.backgroundColor = 'blue';
     });
 });
