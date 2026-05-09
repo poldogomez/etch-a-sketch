@@ -1,6 +1,7 @@
 let gridSide = 32;
 let sideLength = 10;
 
+// div for button
 const titleElement = document.querySelector('h1');
 const btnDiv = document.createElement('div');
     titleElement.appendChild(btnDiv);   
@@ -9,6 +10,11 @@ const gridSizeBtn = document.createElement('button');
     gridSizeBtn.textContent = "Set new grid size";
     btnDiv.appendChild(gridSizeBtn);
 
+gridSizeBtn.addEventListener('click', () => {
+    prompt('How many squares per side?');
+});
+
+    
 const container = document.querySelector("#container");
     // set max width
     container.style.maxWidth = (sideLength * gridSide + gridSide - 1) + "px";
