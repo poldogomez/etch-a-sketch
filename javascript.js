@@ -22,11 +22,12 @@ gridSizeBtn.addEventListener('click', () => {
 });
 
 // build the grid
-function buildGrid (gridCubes) {
-
+function buildGrid(gridCubes) {
+    
     const container = document.querySelector("#container");
-    // set max width
-    container.style.maxWidth = (sideLength * gridCubes + gridCubes - 1) + "px";
+    container.replaceChildren();
+    // set max width -- sideLength * gridCubes + gridCubes - 1
+    container.style.maxWidth = (Number(sideLength) * Number(gridCubes) + Number(gridCubes) - 1) + "px";
 
     for (let i = 1; i <= gridCubes; i++) {
         for (let j = 1; j <= gridCubes; j++) {
