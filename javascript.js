@@ -11,7 +11,10 @@ const gridSizeBtn = document.createElement('button');
     btnDiv.appendChild(gridSizeBtn);
 
 gridSizeBtn.addEventListener('click', () => {
-    prompt('How many squares per side?');
+    let userInput = prompt('How many squares per side?');
+    if (userInput < 1 || userInput > 100) {
+        alert("Must be greater than 0 but less than 100. Please try again.")
+    }
 });
 
     
