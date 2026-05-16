@@ -1,5 +1,7 @@
-let gridSide = 32;
-let sideLength = 10;
+let gridSide = 16;
+let sideLength = 5;
+
+buildGrid(gridSide);
 
 // div for button
 const titleElement = document.querySelector('h1');
@@ -14,23 +16,29 @@ gridSizeBtn.addEventListener('click', () => {
     let userInput = prompt('How many squares per side?');
     if (userInput < 1 || userInput > 100 || isNaN(userInput)) {
         alert("Must be a number > 0 but <= 100. Please try again.")
+    } else {
+        return buildGrid(userInput);
     }
 });
 
-    
-const container = document.querySelector("#container");
+// build the grid
+function buildGrid (gridCubes) {
+
+    const container = document.querySelector("#container");
     // set max width
-    container.style.maxWidth = (sideLength * gridSide + gridSide - 1) + "px";
-for (let i = 1; i <= gridSide; i++) {
-    for (let j = 1; j <= gridSide; j++) {
-        // create grid
-        const square = document.createElement("div");
-            square.classList.add("small-square");
-            square.style.width = sideLength + "px";
-            square.style.height = sideLength + "px";
-        container.appendChild(square);
+    container.style.maxWidth = (sideLength * gridCubes + gridCubes - 1) + "px";
+
+    for (let i = 1; i <= gridCubes; i++) {
+        for (let j = 1; j <= gridCubes; j++) {
+            // create grid
+            const square = document.createElement("div");
+                square.classList.add("small-square");
+                square.style.width = sideLength + "px";
+                square.style.height = sideLength + "px";
+            container.appendChild(square);
+        };
     };
-};
+}
 
 const boxes = document.querySelectorAll(".small-square");
 
