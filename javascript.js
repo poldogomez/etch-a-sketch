@@ -39,12 +39,12 @@ function buildGrid(gridCubes) {
             container.appendChild(square);
         };
     };
-}
 
-const boxes = document.querySelectorAll(".small-square");
+    const boxes = document.querySelectorAll(".small-square");
 
-boxes.forEach(box => {
-    box.addEventListener('mouseout', () => {
-        box.style.backgroundColor = 'blue';
+    boxes.forEach(box => {
+        box.addEventListener('mouseout', () => {
+            box.style.backgroundColor = 'blue';
+        });
     });
-});
+}
