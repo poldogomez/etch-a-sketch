@@ -12,8 +12,8 @@ const gridSizeBtn = document.createElement('button');
 
 gridSizeBtn.addEventListener('click', () => {
     let userInput = prompt('How many squares per side?');
-    if (userInput < 1 || userInput > 100) {
-        alert("Must be greater than 0 but less than 100. Please try again.")
+    if (userInput < 1 || userInput > 100 || isNaN(userInput)) {
+        alert("Must be a number > 0 but <= 100. Please try again.")
     }
 });
 
