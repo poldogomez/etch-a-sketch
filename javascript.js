@@ -48,8 +48,11 @@ function buildGrid(gridCubes) {
 
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
-            const randomColor = Math.floor(Math.random() * 7);
-            box.style.backgroundColor = colors[randomColor];
+            const r = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const randomRGB = `rgb(${r}, ${g}, ${b})`;
+            box.style.backgroundColor = randomRGB;
         });
         box.addEventListener('click', () => {
             box.style.backgroundColor = 'red';
