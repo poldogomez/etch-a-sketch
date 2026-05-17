@@ -1,5 +1,6 @@
 let gridSide = 16; // initial amount of cubes
 let standardContainerSide = 500; // 500px
+let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
 buildGrid(gridSide);
 
@@ -47,7 +48,8 @@ function buildGrid(gridCubes) {
 
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
-            box.style.backgroundColor = 'blue';
+            const randomColor = Math.floor(Math.random() * 7);
+            box.style.backgroundColor = colors[randomColor];
         });
         box.addEventListener('click', () => {
             box.style.backgroundColor = 'red';
