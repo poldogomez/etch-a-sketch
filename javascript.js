@@ -46,8 +46,11 @@ function buildGrid(gridCubes) {
     const boxes = document.querySelectorAll(".small-square");
 
     boxes.forEach(box => {
-        box.addEventListener('mouseout', () => {
+        box.addEventListener('mouseover', () => {
             box.style.backgroundColor = 'blue';
+        });
+        box.addEventListener('click', () => {
+            box.style.backgroundColor = 'red';
         });
     });
     return;
