@@ -1,4 +1,5 @@
 let gridSide = 16; // initial amount of cubes
+let standardContainerSide = 500; // 500px
 
 buildGrid(gridSide);
 
@@ -26,10 +27,10 @@ function buildGrid(gridCubes) {
     const container = document.querySelector("#container");
     container.replaceChildren();
 
-    container.style.width = "500px";
-    container.style.height = "500px";
+    container.style.width = standardContainerSide + "px";
+    container.style.height = standardContainerSide + "px";
 
-    const sideLength = 500 / gridCubes; 
+    const sideLength = standardContainerSide / gridCubes; 
 
     for (let i = 1; i <= gridCubes; i++) {
         for (let j = 1; j <= gridCubes; j++) {
