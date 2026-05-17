@@ -1,5 +1,4 @@
-let gridSide = 16;
-let sideLength = 5;
+let gridSide = 16; // initial amount of cubes
 
 buildGrid(gridSide);
 
@@ -26,8 +25,11 @@ function buildGrid(gridCubes) {
     
     const container = document.querySelector("#container");
     container.replaceChildren();
-    // set max width -- sideLength * gridCubes + gridCubes - 1
-    container.style.maxWidth = (Number(sideLength) * Number(gridCubes) + Number(gridCubes) - 1) + "px";
+
+    container.style.width = "500px";
+    container.style.height = "500px";
+
+    const sideLength = 500 / gridCubes; 
 
     for (let i = 1; i <= gridCubes; i++) {
         for (let j = 1; j <= gridCubes; j++) {
@@ -47,4 +49,5 @@ function buildGrid(gridCubes) {
             box.style.backgroundColor = 'blue';
         });
     });
+    return;
 }
