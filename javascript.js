@@ -1,6 +1,5 @@
 let gridSide = 16; // initial amount of cubes
 let standardContainerSide = 500; // 500px
-let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
 buildGrid(gridSide);
 
