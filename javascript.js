@@ -49,7 +49,25 @@ function buildGrid(gridCubes) {
         box.addEventListener('mouseover', () => {
             // const opaque = window.getComputedStyle(box);
             if (box.style.opacity === '0.1') { 
+                box.style.opacity = 0.2;                
+            } else if (box.style.opacity === '0.2') {       
+                box.style.opacity = 0.3;
+            } else if (box.style.opacity === '0.3') {       
+                box.style.opacity = 0.4;
+            } else if (box.style.opacity === '0.4') {       
+                box.style.opacity = 0.5;
+            } else if (box.style.opacity === '0.5') {       
+                box.style.opacity = 0.6;
+            } else if (box.style.opacity === '0.6') {       
+                box.style.opacity = 0.7;
+            } else if (box.style.opacity === '0.7') {       
                 box.style.opacity = 0.8;
+            } else if (box.style.opacity === '0.8') {       
+                box.style.opacity = 0.9;
+            } else if (box.style.opacity === '0.9') {       
+                box.style.opacity = 1.0;
+            } else if (box.style.opacity === '1') {       
+                box.style.opacity = 1.0;
             } else {
                 const r = Math.floor(Math.random() * 256);
                 const b = Math.floor(Math.random() * 256);
@@ -64,4 +82,4 @@ function buildGrid(gridCubes) {
         });
     });
     return;
-}
+};
