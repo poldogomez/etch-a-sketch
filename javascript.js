@@ -44,14 +44,20 @@ function buildGrid(gridCubes) {
     };
 
     const boxes = document.querySelectorAll(".small-square");
-
+    
     boxes.forEach(box => {
         box.addEventListener('mouseover', () => {
-            const r = Math.floor(Math.random() * 256);
-            const b = Math.floor(Math.random() * 256);
-            const g = Math.floor(Math.random() * 256);
-            const randomRGB = `rgb(${r}, ${g}, ${b})`;
-            box.style.backgroundColor = randomRGB;
+            // const opaque = window.getComputedStyle(box);
+            if (box.style.opacity === '0.1') { 
+                box.style.opacity = 0.8;
+            } else {
+                const r = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const randomRGB = `rgb(${r}, ${g}, ${b})`;
+                box.style.backgroundColor = randomRGB;
+                box.style.opacity = 0.1;
+            };
         });
         box.addEventListener('click', () => {
             box.style.backgroundColor = 'red';
